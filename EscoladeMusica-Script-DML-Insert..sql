@@ -1,4 +1,4 @@
-INSERT INTO `mydb`.`sinfonia` (`idsinfonia`, `data_composta`, `nome`, `compositor`) 
+INSERT INTO `mydb`.`sinfonia` (`idsinfonia`, `data_criacao`, `nome`, `compositor`) 
 VALUES 
 (1, '1808-12-22', 'Sinfonia No. 5', 'Ludwig van Beethoven'),
 (2, '1824-05-07', 'Sinfonia No. 9', 'Ludwig van Beethoven'),

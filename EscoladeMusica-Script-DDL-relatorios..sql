@@ -1,11 +1,11 @@
 -- 1. Listar todas as sinfonias com seus compositores.
 SELECT nome, compositor FROM mydb.sinfonia;
 
+-- 2. Listar todos os músicos e os instrumentos que tocam.
+SELECT m.nome AS musico, i.nome AS instrumento
+FROM mydb.musico m
+JOIN mydb.instrumento i ON m.instrumento_idinstrumento = i.idinstrumento;
 
--- 2. Obter a lista de orquestras e suas respectivas sinfonias.
-SELECT o.nome AS orquestra, s.nome AS sinfonia
-FROM mydb.orquestra o
-JOIN mydb.sinfonia s ON o.sinfonia_idsinfonia = s.idsinfonia;
 
 
 -- 3. Mostrar todos os músicos e suas funções.
@@ -18,14 +18,14 @@ JOIN mydb.funcao f ON m.funcao_idfuncao = f.idfuncao;
 SELECT s.nome AS sinfonia, i.nome AS instrumento
 FROM mydb.sinfonia s
 JOIN mydb.musico m ON s.idsinfonia = m.sinfonia_idsinfonia
-JOIN mydb.instrumentos i ON m.instrumentos_idinstrumentos = i.idinstrumentos
+JOIN mydb.instrumento i ON m.instrumento_idinstrumento = i.idinstrumento
 order by sinfonia;
 
 
 -- 5. Contar quantos músicos tocam cada tipo de instrumento.
 SELECT i.nome AS instrumento, COUNT(m.cpf) AS quantidade
-FROM mydb.instrumentos i
-LEFT JOIN mydb.musico m ON i.idinstrumentos = m.instrumentos_idinstrumentos
+FROM mydb.instrumento i
+LEFT JOIN mydb.musico m ON i.idinstrumento = m.instrumento_idinstrumento
 GROUP BY i.nome;
 
 
@@ -62,10 +62,10 @@ FROM mydb.musico m
 JOIN mydb.orquestra o ON m.orquestra_idorquestra = o.idorquestra;
 
 
--- 11. Mostrar os instrumentos e o número de músicos que tocam cada um.
+-- 11. Mostrar os instrumentos e o número de músicos que tocam cada um. ********
 SELECT i.nome AS instrumento, COUNT(m.cpf) AS total_musicos
-FROM mydb.instrumentos i
-LEFT JOIN mydb.musico m ON i.idinstrumentos = m.instrumentos_idinstrumentos
+FROM mydb.instrumento i
+LEFT JOIN mydb.musico m ON i.idinstrumento = m.instrumento_idinstrumento
 GROUP BY i.nome;
 
 
@@ -90,10 +90,10 @@ ORDER BY s.compositor, s.nome;
 
 
 -- 15. Contar quantos músicos tocam cada função.
-SELECT f.descricao AS funcao, COUNT(m.cpf) AS total_musicos
+SELECT f.descrição AS funcao, COUNT(m.cpf) AS total_musicos
 FROM mydb.funcao f
 LEFT JOIN mydb.musico m ON f.idfuncao = m.funcao_idfuncao
-GROUP BY f.descricao;
+GROUP BY f.descrição;
 
 
 -- 16. Listar as sinfonias que foram criadas entre 2021 e 2023.
@@ -137,7 +137,6 @@ GROUP BY
     o.nome, o.data_criacao;
 
     
-
 
 
 

@@ -1,3 +1,4 @@
+
 -- Desativar checagem de chave estrangeira para evitar erros
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -6,7 +7,7 @@ DROP TABLE IF EXISTS mydb.musico;
 DROP TABLE IF EXISTS mydb.orquestra;
 DROP TABLE IF EXISTS mydb.sinfonia;
 DROP TABLE IF EXISTS mydb.funcao;
-DROP TABLE IF EXISTS mydb.instrumentos;
+DROP TABLE IF EXISTS mydb.instrumento;
 
 -- Excluir todas as views
 DROP VIEW IF EXISTS mydb.view_nome; -- Altere "view_nome" para os nomes das suas views

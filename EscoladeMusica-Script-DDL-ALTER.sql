@@ -3,8 +3,9 @@
 ALTER TABLE `mydb`.`orquestra` 
 MODIFY COLUMN `nome` VARCHAR(100);
 
+--  Modificar o tamanho do campo cpf na tabela musico
 ALTER TABLE `mydb`.`musico` 
-MODIFY COLUMN `cpf` VARCHAR(100);
+MODIFY COLUMN `cpf` VARCHAR(11);
 
 --  Renomear a tabela sinfonia para composicao_sinfonica
 RENAME TABLE `mydb`.`composicao_sinfonica` TO `sinfonia`;
@@ -40,4 +41,3 @@ ADD COLUMN `genero_musical` VARCHAR(45) AFTER `compositor`;
 -- Remover o índice genero_musical da tabela sinfonia
 ALTER TABLE `mydb`.`sinfonia`
 DROP COLUMN `genero_musical`;
-

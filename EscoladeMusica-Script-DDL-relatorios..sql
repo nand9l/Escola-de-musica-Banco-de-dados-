@@ -9,7 +9,7 @@ JOIN mydb.instrumento i ON m.instrumento_idinstrumento = i.idinstrumento;
 
 
 -- 3. Mostrar todos os músicos e suas funções.
-SELECT m.nome AS musico, f.descricao AS funcao
+SELECT m.nome AS musico, f.descrição AS funcao
 FROM mydb.musico m
 JOIN mydb.funcao f ON m.funcao_idfuncao = f.idfuncao;
 
@@ -70,7 +70,7 @@ GROUP BY i.nome;
 
 
 -- 12. Mostrar as funções que não estão sendo ocupadas por nenhum músico.
-SELECT f.descricao
+SELECT f.descrição
 FROM mydb.funcao f
 LEFT JOIN mydb.musico m ON f.idfuncao = m.funcao_idfuncao
 WHERE m.cpf IS NULL;
@@ -137,6 +137,3 @@ GROUP BY
     o.nome, o.data_criacao;
 
     
-
-
-

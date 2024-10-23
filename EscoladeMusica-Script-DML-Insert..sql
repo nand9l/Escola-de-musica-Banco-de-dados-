@@ -1,21 +1,3 @@
--- Inserindo tabela de musico
-INSERT INTO `mydb`.`musico` (`cpf`, `nacionalidade`, `data_nasc`, `nome`, `email`, `telefone`, `Sinfonia_idSinfonia`, `Orquestra_idOrquestra`, `Funcao_idFuncao`, `Instrumento_idInstrumento`) 
-VALUES 
-('12345678901', 'Brasileira', '1990-01-15', 'João Silva', 'joao.silva@example.com', '(11) 98765-4321', 3, 2, 1, 6),
-('23456789012', 'Argentina', '1985-05-30', 'Maria Oliveira', 'maria.oliveira@example.com', '(21) 99876-5432', 1, 1, 2, 4),
-('34567890123', 'Brasileira', '1992-03-22', 'Carlos Santos', 'carlos.santos@example.com', '(31) 91234-5678', 5, 4, 3, 1),
-('45678901234', 'Uruguaia', '1988-07-08', 'Ana Lima', 'ana.lima@example.com', '(41) 98765-0987', 9, 3, 1, 3),
-('56789012345', 'Brasileira', '1995-10-12', 'Felipe Costa', 'felipe.costa@example.com', '(51) 99876-5430', 2, 2, 4, 5),
-('67890123456', 'Chilena', '1983-12-01', 'Juliana Pereira', 'juliana.pereira@example.com', '(61) 91234-6789', 10, 1, 2, 6),
-('78901234567', 'Brasileira', '1991-09-18', 'Roberto Almeida', 'roberto.almeida@example.com', '(71) 98765-4320', 0, 4, 1, 7),
-('89012345678', 'Paraguaia', '1987-06-25', 'Fernanda Rocha', 'fernanda.rocha@example.com', '(81) 99876-5431', 4, 3, 3, 8),
-('90123456789', 'Brasileira', '1993-11-09', 'Ricardo Martins', 'ricardo.martins@example.com', '(91) 91234-5670', 8, 2, 4, 9),
-('01234567890', 'Peruana', '1994-04-21', 'Tatiane Santos', 'tatiane.santos@example.com', '(11) 98765-0986', 6, 1, 5, 10),
-('11223344556', 'Brasileira', '1990-02-18', 'Lucas Ferreira', 'lucas.ferreira@example.com', '(11) 91234-5678', 1, 3, 2, 4),
-('22334455667', 'Chilena', '1989-04-25', 'Sofia González', 'sofia.gonzalez@example.com', '(21) 92345-6789', 3, 1, 1, 2),
-('33445566778', 'Brasileira', '1984-08-14', 'André Souza', 'andre.souza@example.com', '(31) 93456-7890', 5, 3, 3, 7),
-('44556677889', 'Paraguaia', '1991-12-11', 'Valeria López', 'valeria.lopez@example.com', '(41) 94567-8901', 2, 2, 4, 5),
-('55667788990', 'Brasileira', '1992-07-19', 'Thiago Martins', 'thiago.martins@example.com', '(51) 95678-9012', 0, 4, 5, 1);
 
 -- Inserindo registros na tabela funcao
 INSERT INTO `mydb`.`funcao` (`idfuncao`, `descrição`) 
@@ -73,3 +55,21 @@ VALUES
 (8, '1965-12-30', 'Uruguai', 'Salto', 'Orquestra Sinfônica de Salto'),
 (9, '1982-04-19', 'Argentina', 'Rosário', 'Orquestra Sinfônica de Rosário'),
 (10, '1985-09-12', 'Brasil', 'Belo Horizonte', 'Orquestra Filarmônica de Minas Gerais');
+
+INSERT INTO `mydb`.`musico` (`cpf`, `nacionalidade`, `data_nasc`, `nome`, `email`, `telefone`, `Sinfonia_idSinfonia`, `Orquestra_idOrquestra`, `Funcao_idFuncao`, `Instrumento_idInstrumento`) 
+VALUES 
+('12345678901', 'Brasileira', '1990-01-15', 'João Silva', 'joao.silva@example.com', '(11) 98765-4321', 3, 2, 1, 6),
+('23456789012', 'Argentina', '1985-05-30', 'Maria Oliveira', 'maria.oliveira@example.com', '(21) 99876-5432', 1, 1, 2, 4),
+('34567890123', 'Brasileira', '1992-03-22', 'Carlos Santos', 'carlos.santos@example.com', '(31) 91234-5678', 5, 4, 3, 1),
+('45678901234', 'Uruguaia', '1988-07-08', 'Ana Lima', 'ana.lima@example.com', '(41) 98765-0987', 9, 3, 4, 3),
+('56789012345', 'Brasileira', '1995-10-12', 'Felipe Costa', 'felipe.costa@example.com', '(51) 99876-5430', 2, 10, 4, 5),
+('67890123456', 'Chilena', '1983-12-01', 'Juliana Pereira', 'juliana.pereira@example.com', '(61) 91234-6789', 10, 1, 2, 6),
+('78901234567', 'Brasileira', '1991-09-18', 'Roberto Almeida', 'roberto.almeida@example.com', '(71) 98765-4320', 5, 8, 10, 7),
+('89012345678', 'Paraguaia', '1987-06-25', 'Fernanda Rocha', 'fernanda.rocha@example.com', '(81) 99876-5431', 4, 3, 3, 8),
+('90123456789', 'Brasileira', '1993-11-09', 'Ricardo Martins', 'ricardo.martins@example.com', '(91) 91234-5670', 8, 7, 4, 9),
+('01234567890', 'Argentina', '1994-04-21', 'Tatiane Santos', 'tatiane.santos@example.com', '(11) 98765-0986', 6, 1, 5, 10),
+('11223344556', 'Brasileira', '1990-02-18', 'Lucas Ferreira', 'lucas.ferreira@example.com', '(11) 91234-5678', 1, 3, 2, 4),
+('22334455667', 'Chilena', '1989-04-25', 'Sofia González', 'sofia.gonzalez@example.com', '(21) 92345-6789', 3, 1, 9, 2),
+('33445566778', 'Brasileira', '1984-08-14', 'André Souza', 'andre.souza@example.com', '(31) 93456-7890', 5, 3, 3, 7),
+('44556677889', 'Paraguaia', '1991-12-11', 'Valeria López', 'valeria.lopez@example.com', '(41) 94567-8901', 2, 2, 4, 5),
+('55667788990', 'Brasileira', '1992-07-19', 'Thiago Martins', 'thiago.martins@example.com', '(51) 95678-9012', 1, 4, 5, 1);
